@@ -1,6 +1,8 @@
+//model does not know about controller and views, it has only access to data
+//model holds default data, every time there is a change, model notify its subscribers (views)  
 define(['jquery-1', 
-		'calculator-mvc/data/data-sample', 
-		'calculator-mvc/js/vendor/observer'
+	'calculator-mvc/data/data-sample', 
+	'calculator-mvc/js/vendor/observer'
 		], 
 	function ($, data, makeObservableSubject) {
 	
