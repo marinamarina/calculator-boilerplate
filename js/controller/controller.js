@@ -12,7 +12,7 @@ define(['jquery-1',
         var resultsView = new ResultsView(calculatorModel, $('.choices'));
         
         //controller holds event handlers
-        resultsView.input1.on("change", function() {
+        resultsView.genderSelect.on("change", function() {
             var gender = $(this).val();
             calculatorModel.updateGender(gender);
         })
