@@ -1,0 +1,54 @@
+$bbc-grey: #505050;
+$bbc-orange: #D1700E;
+$your-choice: #522751;
+
+/*Functions and mixins*/
+@mixin reset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+@mixin mySelect {
+	background: transparent;
+	width: 204px;
+	padding: 4px;
+	height: 24px;
+	margin: 0px;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	word-wrap: break-word;
+	cursor: pointer;
+	border: 1px solid #999;
+	color: #505050;
+	-webkit-border-radius: 0px!important;
+
+}
+@mixin myStyledSelect {
+	background: url("/news/special/2013/newsspec_4950/img/select-arrow.png") no-repeat scroll right center #FFFFFF;
+	height: 24px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 180px;
+	border: 1px solid #999;
+}
+@mixin positionedSelect {
+	top: 41px;
+	left: 8px;
+	position: absolute;
+}
+@mixin selectSpan {
+	font-size: 0.9em;
+	position: absolute;
+	top: 5px;
+	left: 6px;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	text-align: start;
+}
+@mixin transparentResultsBg {
+	background-color: transparentize(#EAEAEA, 0.5);
+}
