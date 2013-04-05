@@ -7,9 +7,11 @@ define(['jquery-1',
     //defining a controller object
     var Controller = function () {
 
-        var model = new Model(data);
+        //initialising model and view
+        var model = new Model(data); //TODO model should be renamed to calculator
         var view = new View(model, $('.choices'));
         
+        //controller holds event handlers
         view.input1.on("change", function() {
             var gender = $(this).val();
             model.updateGender(gender);
