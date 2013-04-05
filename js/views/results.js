@@ -8,7 +8,7 @@ define(['jquery-1',
 		'calculator-mvc/js/vendor/observer'],
 		function ($, makeObservableSubject) {
 	
-	var View = function (model, rootObject) {//defining a view object
+	var ResultsView = function (model, rootObject) {//defining a view object
 	    var that = this;
 	    this.input1 = rootObject.find('#s1 input');//this is my first input (select gender)
 	    this.rateElement = $('#result1 .percentage');
@@ -20,5 +20,5 @@ define(['jquery-1',
 		})
 	}
 
-	return View;
+	return ResultsView;
 })

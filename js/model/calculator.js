@@ -6,7 +6,7 @@ define(['jquery-1',
 		], 
 	function ($, data, makeObservableSubject) {
 	
-	var Model = function (data) {
+	var CalculatorModel = function (data) {
 	    var that = this;
 	    this.data = data; //passing the data in
 	    this.gender = ''; //no gender chosen
@@ -34,6 +34,6 @@ define(['jquery-1',
 	    }
 	}
 
-	return Model;
+	return CalculatorModel;
     
 })
