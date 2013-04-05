@@ -1,6 +1,9 @@
 /*This is the view for displaying results*/
 //VIEW keeps an eye on a model and is responsible for updating the DOM
 
+//in fact, all DOM manipulation are happening here. EG., I assign the input to a variable
+//and use it later in controller to bind an event handler to it. Controller is not allowed to query the DOM
+
 define(['jquery-1',
 		'calculator-mvc/js/vendor/observer'],
 		function ($, makeObservableSubject) {
