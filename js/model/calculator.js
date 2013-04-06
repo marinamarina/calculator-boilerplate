@@ -6,34 +6,32 @@ define(['jquery-1',
 		], 
 	function ($, data, makeObservableSubject) {
 	
-	var CalculatorModel = function (data) {
-	    var that = this;
+	var CalculatorModel = function (data) { //contructor
 	    this.data = data; //passing the data in
 	    this.gender = ''; //no gender chosen
 	    this.rate = 0;
 	    this.claims = 0;
 	    this.modelChangedSubject = new makeObservableSubject();
-	    
-	    this.updateGender = function(currentGender) {
-	    	that.gender = currentGender;
-			that.rate = that.data['gender'][currentGender]['data']['rate'];
-			that.claims = that.data['gender'][currentGender]['data']['population']*that.rate;
-	    	that.modelChangedSubject.notifyObservers();
-	    }
-	    this.numberWithCommas = function(x) {
-		    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-		}
-	    this.getGender = function () {
-	    	return that.gender;
-	    }
-	    this.getRate = function () {
-	        return that.rate;
-	    }
-	    this.getClaims = function () {
-	        return that.numberWithCommas(that.claims.toFixed(0));
-	    }
 	}
-
+	CalculatorModel.prototype.updateGender = function(currentGender) {
+	    	this.gender = currentGender;
+			this.rate = this.data['gender'][currentGender]['data']['rate'];
+			this.claims = this.data['gender'][currentGender]['data']['population'] * this.rate;
+	    	this.modelChangedSubject.notifyObservers();
+	}
+	CalculatorModel.prototype.numberWithCommas = function(x) {
+		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	}
+	CalculatorModel.prototype.getGender = function () {
+	    return this.gender;
+	}
+	CalculatorModel.prototype.getRate = function () {
+	    return this.rate;
+	}
+	CalculatorModel.prototype.getClaims = function () {
+	    return this.numberWithCommas(this.claims.toFixed(0));
+	}
+	
 	return CalculatorModel;
     
 })

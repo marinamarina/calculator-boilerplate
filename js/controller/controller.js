@@ -4,8 +4,12 @@ define(['jquery-1',
         'calculator-mvc/data/data-sample'], function ($, CalculatorModel, ResultsView, data) {
     
 
+<<<<<<< HEAD
     //defining a controller object
     var Controller = function () { //TODO Controller should be defined as a singleton
+=======
+    function init() {
+>>>>>>> controller is a singleton, added prototyping in the model
 
         //initialising model and view
         var calculatorModel = new CalculatorModel(data); 
@@ -19,5 +23,5 @@ define(['jquery-1',
 
     }
 
-    return Controller;
+    return {init: init};
 });

@@ -32,7 +32,7 @@
        if (isDesktop) {
         news.$(function () {  //desktop
             var $ = news.$;
-            var controller = new Controller();
+            Controller.init();
             
         });
        } else {
