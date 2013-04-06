@@ -8,7 +8,7 @@ define(['jquery-1',
     var Controller = function () {
 
         //initialising model and view
-        var calculatorModel = new CalculatorModel(data); //TODO model should be renamed to calculator
+        var calculatorModel = new CalculatorModel(data); 
         var resultsView = new ResultsView(calculatorModel, $('.choices'));
         
         //controller holds event handlers
