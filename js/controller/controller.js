@@ -5,7 +5,7 @@ define(['jquery-1',
     
 
     //defining a controller object
-    var Controller = function () {
+    var Controller = function () { //TODO Controller should be defined as a singleton
 
         //initialising model and view
         var calculatorModel = new CalculatorModel(data); 
