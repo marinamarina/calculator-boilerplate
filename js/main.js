@@ -12,7 +12,7 @@
             		'bootstrap': 'http://localhost:8888/calculator-mvc/js/bootstrap'
             	}
         	};
-	} else { 
+	} else {
         console.log("mobile environment");
         document.getElementById('newsspec_4950').className = 'mobile';
 			config = {
