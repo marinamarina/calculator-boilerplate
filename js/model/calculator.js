@@ -32,6 +32,5 @@ define(['bootstrap',
 	CalculatorModel.prototype.getClaims = function () {
 	    return this.numberWithCommas(this.claims.toFixed(0));
 	}
-	
 	return CalculatorModel;  
 })

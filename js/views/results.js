@@ -20,6 +20,5 @@ define(['bootstrap',
 	        that.claimsElement.html(model.getClaims() + ' claims');
 		})
 	}
-
 	return ResultsView;
 })
