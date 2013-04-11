@@ -1,15 +1,11 @@
-define(['jquery-1', 
+define(['bootstrap', 
         'calculator-mvc/js/model/calculator',        
         'calculator-mvc/js/views/results', 
-        'calculator-mvc/data/data-sample'], function ($, CalculatorModel, ResultsView, data) {
+        'calculator-mvc/data/data-sample'], function (news, CalculatorModel, ResultsView, data) {
     
 
-<<<<<<< HEAD
-    //defining a controller object
-    var Controller = function () { //TODO Controller should be defined as a singleton
-=======
+    var $ = news.$;
     function init() {
->>>>>>> controller is a singleton, added prototyping in the model
 
         //initialising model and view
         var calculatorModel = new CalculatorModel(data); 
@@ -23,5 +19,5 @@ define(['jquery-1',
 
     }
 
-    return {init: init};
-});
+    return {init: init}
+})

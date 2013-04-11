@@ -4,10 +4,11 @@
 //in fact, all DOM manipulation are happening here. EG., I assign the input to a variable
 //and use it later in controller to bind an event handler to it. Controller is not allowed to query the DOM
 
-define(['jquery-1',
+define(['bootstrap',
 		'calculator-mvc/js/vendor/observer'],
-		function ($, makeObservableSubject) {
+		function (news, makeObservableSubject) {
 	
+	var $ = news.$;
 	var ResultsView = function (model, rootObject) {//defining a view object
 	    var that = this;
 	    this.genderSelect = rootObject.find('#s1 input');//this is my first input (select gender)

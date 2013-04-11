@@ -1,11 +1,12 @@
 //model does not know about controller and views, it has only access to data
 //model holds default data, every time there is a change, model notify its subscribers (views)  
-define(['jquery-1', 
-	'calculator-mvc/data/data-sample', 
-	'calculator-mvc/js/vendor/observer'
+define(['bootstrap', 
+		'calculator-mvc/data/data-sample', 
+		'calculator-mvc/js/vendor/observer'
 		], 
-	function ($, data, makeObservableSubject) {
+	function (news, data, makeObservableSubject) {
 	
+	var $ = news.$;
 	var CalculatorModel = function (data) { //contructor
 	    this.data = data; //passing the data in
 	    this.gender = ''; //no gender chosen
@@ -32,6 +33,5 @@ define(['jquery-1',
 	    return this.numberWithCommas(this.claims.toFixed(0));
 	}
 	
-	return CalculatorModel;
-    
+	return CalculatorModel;  
 })

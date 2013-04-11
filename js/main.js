@@ -24,8 +24,7 @@
 	}
 
     dependencies = ['bootstrap',
-                    'calculator-mvc/js/controller/controller',
-                    ];
+                    'calculator-mvc/js/controller/controller'];
 
 	require(config, dependencies, function (news, Controller) { 
 
@@ -33,13 +32,10 @@
         news.$(function () {  //desktop
             var $ = news.$;
             Controller.init();
-            
-        });
+        })
        } else {
-
+            Controller.init();
 
        }
-
-
 	}); //end of require
 }());//end of the function
