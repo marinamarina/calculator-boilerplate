@@ -12,14 +12,13 @@ require({
 }); 
 var bbc = {};
 </script>
- <!--#include virtual="inc/main.inc" -->
 </head>
 <body>
     <h1 class="masthead">BBC News Specials - Desktop marina</h1>
     <p>Naked page that identifies itself as delivered via the Desktop site require is global - and jquery and istats are mapped to spoof BBC require map.</p>
     <p>Any framework libraries can be added to the vendor/libs directory and added to the require map under the same key as used in the BBC require map - CSS is reset - and font-family and color set to BBC global standard</p>
-    <p class="top-bottom">Start of Newsspec-<!--#echo var="jira" --></p>
-    <!--#include virtual="/news/special/2013/newsspec_$jira/inc/main.inc" -->
-    <p class="top-bottom">End of Newsspec-<!--#echo var="jira" --></p>
+    <p class="top-bottom">Start of Calculator MVC example</p>
+    <!--#include virtual="inc/main.inc" -->
+    <p class="top-bottom">End of Calculator MVC example</p>
 </body>
 </html>
