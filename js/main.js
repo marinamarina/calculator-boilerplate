@@ -9,7 +9,7 @@
 		config = {
             	paths: {
                 	'calculator-mvc': baseUrl + basePath,
-            		'bootstrap': 'http://localhost:8888/calculator-mvc/js/bootstrap'
+            		'bootstrap': 'js/bootstrap'
             	}
         	}
 	} else {
@@ -18,13 +18,13 @@
 			config = {
             	paths: {
                 	'newsspec_4950': baseUrl + basePath,
-        		    'bootstrap': 'http://localhost:8888/calculator-mvc/js/bootstrap-mobile'
+        		    'bootstrap': 'js/bootstrap-mobile'
         		}
         	};
 	}
 
     dependencies = ['bootstrap',
-                    'calculator-mvc/js/controller/controller'];
+                    'js/controller/controller'];
 
 	require(config, dependencies, function (news, Controller) { 
 

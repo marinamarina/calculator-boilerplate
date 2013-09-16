@@ -5,7 +5,7 @@
 //and use it later in controller to bind an event handler to it. Controller is not allowed to query the DOM
 
 define(['bootstrap',
-	'calculator-mvc/js/vendor/observer'],
+	'js/vendor/observer'],
 	function (news, makeObservableSubject) {
 	
 	var $ = news.$;

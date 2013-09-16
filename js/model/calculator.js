@@ -1,8 +1,8 @@
 //model does not know about controller and views, it has only access to data
 //model holds default data, every time there is a change, model notify its subscribers (views)  
 define(['bootstrap', 
-		'calculator-mvc/data/data-sample', 
-		'calculator-mvc/js/vendor/observer'
+		'data/data-sample', 
+		'js/vendor/observer'
 		], 
 	function (news, data, makeObservableSubject) {
 	

@@ -1,7 +1,7 @@
 define(['bootstrap', 
-        'calculator-mvc/js/model/calculator',        
-        'calculator-mvc/js/views/results', 
-        'calculator-mvc/data/data-sample'], function (news, CalculatorModel, ResultsView, data) {
+        'js/model/calculator',        
+        'js/views/results', 
+        'data/data-sample'], function (news, CalculatorModel, ResultsView, data) {
     
 
     var $ = news.$;
