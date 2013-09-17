@@ -1,8 +1,8 @@
-/*This is the view for displaying results*/
-//VIEW keeps an eye on a model and is responsible for updating the DOM
-
-//in fact, all DOM manipulation are happening here. EG., I assign the input to a variable
-//and use it later in controller to bind an event handler to it. Controller is not allowed to query the DOM
+/* VIEW - results view
+ * View watches the model (calculator.js) and it's 
+ * main responsibility is to query and update the DOM
+ *
+ */
 
 define(['bootstrap',
 	'js/vendor/observer'],

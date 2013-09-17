@@ -1,18 +1,14 @@
 // Set of dependencies
 // This gives us flexibility to change dependencies with a common API e.g. Bonzo --> jQuery
-define(['vendor/ender/bonzo',
-        'vendor/ender/qwery-mobile',
-        'vendor/istats/istats'
+define(['jquery',
+        'vendor/eventEmitter'
 ], function (
-    bonzo,
-    qwery,
-    istats
+    jquery,
+    pubsub
 ) {
     var news = {
-        $: function(selector, context) {
-            return bonzo(qwery(selector, context));
-        },
-        istats: istats
+        $: jquery,
+        pubsub: new EventEmitter()
     };
 
     return news;
