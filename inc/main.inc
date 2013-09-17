@@ -3,14 +3,14 @@
     <div id="projectname">
         <!--/header-->
         <div class="header">
-            <h2>How many people are lorem ipsum?</h2>
+            <h2>How many people like you are lorem ipsum?</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore 
             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-            <p class="description">Find out the ﬁgure for people like you by selection your details from the options below.</p>
+            <p class="description">Choose the gender:</p>
         </div>
         <!--/header-->
         
-        <!--inner container-->
+        <!--container inner-->
         <div class="container-inner">
             <!--choices-->
             <div class="choices"> 
@@ -61,7 +61,7 @@
             </div> 
             <!--/results-->
         </div>
-        <!--inner container-->               
+        <!--/container inner-->               
     </div>
     <!--/wrapper-->
     <script type="text/javascript" src="js/main.js"></script>
