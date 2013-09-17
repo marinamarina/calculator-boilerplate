@@ -5,33 +5,23 @@
  * a form field and model's properties change), model notifies its subscribers (views)  
  */
 define(['bootstrap', 
-		'data/data-sample', 
-		'js/vendor/observer'
+		'data/data-sample'
 		], 
-	function (news, data, makeObservableSubject) {
+	function (news, data) {
 	
 	var $ = news.$,
+		pubsub = news.pubsub,
 		CalculatorModel;
 		
-	CalculatorModel = function (data) { //contructor
+	/* Constructor */
+	CalculatorModel = function (data) {
 	    this.data = data; //passing the data in
 	    this.gender = ''; //no gender chosen
 	    this.rate = 0;
 	    this.claims = 0;
-	    this.modelChangedSubject = new makeObservableSubject();
 	};
 
-	CalculatorModel.prototype.updateGender = function(currentGender) {
-	    	this.gender = currentGender;
-			this.rate = this.data['gender'][currentGender]['data']['rate'];
-			this.claims = this.data['gender'][currentGender]['data']['population'] * this.rate;
-	    	this.modelChangedSubject.notifyObservers();
-	};
-
-	CalculatorModel.prototype.numberWithCommas = function(x) {
-		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-	};
-
+	/* Getters */
 	CalculatorModel.prototype.getGender = function () {
 	    return this.gender;
 	};
@@ -44,5 +34,18 @@ define(['bootstrap',
 	    return this.numberWithCommas(this.claims.toFixed(0));
 	};
 
+	/* Utility functions */
+	CalculatorModel.prototype.numberWithCommas = function (x) {
+		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	};
+
+	CalculatorModel.prototype.updateGender = function (currentGender) {
+	    this.gender = currentGender;
+		this.rate = this.data['gender'][currentGender]['data']['rate'];
+		this.claims = this.data['gender'][currentGender]['data']['population'] * this.rate;
+
+	    pubsub.emitEvent('gender-updated');
+	};
+
 	return CalculatorModel;  
-})
+});
