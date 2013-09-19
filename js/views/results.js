@@ -13,11 +13,13 @@ define(['bootstrap'],
 
 	ResultsView = function (model, rootObject) { //defining a view object
 	    var that = this;
-	    this.genderSelect = rootObject.find('#s1 input'); //this is my first input (select gender)
-	    this.rateElement = $('#result1 .percentage');
-	    this.claimsElement = $('#result1 .number');
+	    this.genderSelect = rootObject.find('.choices__genderSelect input'); //this is my first input (select gender)
+	    this.resultsEl = $('.results');
+	    this.rateElement = $('.percentage');
+	    this.claimsElement = $('.number');
 	
 	    pubsub.on('gender-updated', function () {
+	    	that.resultsEl.css('visibility', 'visible');
 	        that.rateElement.html(model.getRate() + '%'); 
 	        that.claimsElement.html(model.getClaims() + ' claims');
 		});

@@ -8,8 +8,8 @@
         projectname = 'calculator-mvc',
         basePath = '/' + projectname + '/',
         config,
-        projectWrapper = document.getElementById('projectname'),
-	    isDesktop = (window.bbcNewsResponsive); //this objectis only available on bbc desktop
+        projectWrapper = document.getElementById(projectname),
+	    isDesktop = (window.bbcNewsResponsive); //this object is only available on bbc desktop
 
 	/* Require configs and dependencies */
     config = {

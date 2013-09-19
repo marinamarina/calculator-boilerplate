@@ -1,254 +1,161 @@
-/*Layout styles*/
-#projectname {
+
+/* Layout styles */
+#calculator-mvc {
     margin: 0;
-    width: 624px;   
+    width: 624px;
+    font-size: 16px;   
 }
 .container-inner {
-    width: 624px;
+	padding-left: 1em;
+    width: 100%;
 }
 
-/*Header*/
+/* Header */
 .header {
 	width: 624px;
 	height: 190px;
-	h2 {
-		font-size: 2.461em;
-		font-weight: bold;
-		letter-spacing: -1px;
-		line-height: 34px;
-		color: darken($bbc-grey, 10%);
-	}
-	.description {
-		font-weight: bold;
-	}
+	padding: 1em 0 1em 1em;
 }
+.header__title {
+	font-size: 2.461em;
+	font-weight: bold;
+	letter-spacing: -1px;
+	line-height: 34px;
+	color: darken($bbc-grey, 10%);
+	padding-bottom: 0.6em;
+}
+.header__description {
+	font-weight: bold;
+}
+
 /*Choices*/
 .choices {
-	.gender {
-	    width: 207px;
-	    height: 72px;
-	    position: relative;
-	    float: left;
-	    margin-right: 1px;
-	    background-color: #EAEAEA;
-	    h3 {
-	    	font: bold 18px/16px Helvetica;
-	    	padding: 9px 0 0 8px;
-	    	margin: 0;
-	    	width: 67px;
-	    	position: absolute;
-	    	top: 0;
-	    }
+	overflow: hidden;
+}
+.choices__gender {
+    width: 230px;
+    height: 80px;
+    position: relative;
+    float: left;
+    margin-right: 1px;
+    background-color: #EAEAEA;
+}
+.choices__genderTitle {
+	font-weight: bold;
+	font-size: 1.384em;
+	font-family: Helvetica;
+	line-height: 1em;
+	padding: 9px 0 0 8px;
+	margin: 0;
+	width: 90px;
+	position: absolute;
+	top: 0;
+}
+.choices__genderSelect {
+	@include reset;
+	position: absolute;
+	bottom: 4px;
+}
 
+.choices__gender-select-item {
+	width: 112px;
+	height: 46px;
+	float: left;
+	position: relative;
+	background: url("#{$imgpath}male-off.png") no-repeat 74px 0px;
+	&:last-child {
+		background: url("#{$imgpath}female-off.png") no-repeat 90px 0px;
 	}
-	.region {
-		@extend .gender;
-		width: 208px;
-		select {
-			@include mySelect;
-		}
-		.styled-select {
-			@include myStyledSelect;	
-			@include positionedSelect;
-			span {
-				@include selectSpan;
-			}
-		}
-	}
-	.occupation {
-		@extend .gender;
-		@include reset;
-		.styled-select {
-			@include myStyledSelect;
-			@include positionedSelect;
-			border-left: 1px solid #999;
-			border-top: 1px solid #999;
-			border-bottom: 1px solid #999;
-			position: relative;
-			height: 23px;
-			span {
-				@include selectSpan;
-			}
-		}
-	}
-    form.gender-form {
-		@include reset;
+
+	label {
 		position: absolute;
-		bottom: 4px;
-		.half-wide {
-			width: 99px;
-			height: 46px;
-			float: left;
-			position: relative;
-			background: url("/news/special/2013/newsspec_4950/img/male-off.png") no-repeat 66px 0px;
-			&:last-child {
-				background: url("/news/special/2013/newsspec_4950/img/female-off.png") no-repeat 76px 0px;
-			}
-
-			label {
-				position: absolute;
-				width: 43px;
-				top: 24px;
-				left: 27px;
-			}
-
-			input {
-				top: 24px;
-				left: 6px;
-				position: absolute;
-				width: 24px;
-			}
-		}
+		width: 43px;
+		top: 16px;
+		left: 35px;
 	}
 
-	/*List of occupations*/
-	#occupations-list {
-	    background-color: white;
-	    border: 1px solid #A6A6A6;
-	    color: #000000;
-	    display: none;
-	    font-size: 14px;
-	    left: 8px;
-	    position: absolute;
-	    top: 65px;
-	    z-index: 999;
-	    width: 504px;
-	    > div {
-	    	cursor: pointer;    
-		    padding: 7px 4px 7px 4px;
-		    float: left;
-		    &:nth-of-type(odd) {
-				width: 280px;
-			}
-			&:nth-of-type(even) {
-				width: 208px;
-			}
-			&:hover {
-			   background-color: #39f;
-			   color: #fff;
-			}
-			&:hover .subhead {
-			    color: #fff;
-			}
-			.head {
-				@include reset;
-				color: darken(#999, 50%);
-			    font-weight: bold;
-				font-size: 14px;
-			}
-			.subhead {
-				@include reset;
-			    color: #999;
-			    font-size: 11px;
-			    font-style: italic;
-			    padding-left: 12px;
-			}
-			.selected {
-    		background-color: #dedede;
-			}
-	    }
+	input {
+		top: 16px;
+		left: 6px;
+		position: absolute;
+		width: 24px;
 	}
-
 }
+
+/* Results */
 .results {
-		width: 624px;		
-		
-		/*opacity*/
-	.none {
-		height: 94px;
-		>p {
-			padding: 40px 0 0 8px;
-			.orange-bold {
-				color: $bbc-orange;
-				font-weight: bold;
-				font-size: 32px;
-			}
+	width: 624px;
+	//visibility: hidden;		
+	height: 180px;
+	position: relative;
+}
+.results__header {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	@include reset;
+	font: bold 0.9em/16px;
+	color: $bbc-grey;
+}
+.results__item {
+	@include transparentResultsBg;
+	width: 230px;
+	height: 180px;
+}
+.results__absolute {
+	position: absolute;
+	width: 150px;
+	left: 23px;
+	top: 34px;
+	.percentage {
+		color: $your-choice;
+		font: bold 48px/1em Arial;
+	}
+
+	.your-choice {
+	    margin-bottom: 4px;
+	    text-align: left;
+	    width: 170px;
+	}
+
+	.number {
+		font-size: 1em;
+		margin-bottom: 19px;
+	}
+	p {
+		@include reset;
+		display: block;
+		font: normal 1em/1em Arial;
+		span {
+			padding-left: 7px;
 		}
 	}
-	.all {
-		width: 624px;
-		height: 180px;
-		position: relative;
-		h3 {
-			position: absolute;
-			top: 8px;
-			left: 8px;
-			@include reset;
-			font: bold 16px/16px;
-			color: $bbc-grey;
-		}
-		.column {
-			width: 207px;
-			@include transparentResultsBg;
-			margin-right: 1px;
-			height: 180px;
-			float: left;
-			> div {
-				position: relative;
-				height: 180px;
-				.result-absolute {
-					position: absolute;
-					width: 150px;
-					left: 23px;
-					top: 34px;
-
-					.your-choice {
-					    margin-bottom: 4px;
-					    text-align: left;
-					    width: 170px;
-					}
-					.percentage {
-						color: $your-choice;
-						font: bold 48px/1em Arial;
-					}
-					.number {
-						font-size: 1em;
-    					margin-bottom: 19px;
-					}
-					p {
-						@include reset;
-						display: block;
-						font: normal 1em/1em Arial;
-						span {
-							padding-left: 7px;
-						}
-					}
-				}
-				.result-relative {
-					   position: absolute;
-					   right: 12px;
-					   top: 65px;
-					h4 {
-						color: $bbc-grey;
-					    font: bold 1em/1em Arial;
-					    height: 16px;
-					    padding: 10px 10px 8px 10px;
-					}
-					.down {
-					    background: url("/news/special/2013/newsspec_4950/img/arrowpngs/green.png") no-repeat scroll center bottom transparent;		
-					    }
-				    .up {
-				    	background: url("/news/special/2013/newsspec_4950/img/arrowpngs/red.png") no-repeat scroll center top transparent;
-				    }
-					p {
-						text-align: center;
-						font: normal 11px/1em Arial;
-
-					}
-				}
-			}
-			&:nth-of-type(even) {
-				width: 208px;
-			}
-			
-		}
-		.last {
-			margin-right: 0px;
-			}
-	}
+				
 }
 
-/*Utility*/
+.results__relative {
+	   position: absolute;
+	   right: 12px;
+	   top: 65px;
+	h4 {
+		color: $bbc-grey;
+	    font: bold 1em/1em Arial;
+	    height: 16px;
+	    padding: 10px 10px 8px 10px;
+	}
+	.down {
+	    background: url("#{$imgpath}arrowpngs/green.png") no-repeat scroll center bottom transparent;		
+	    }
+    .up {
+    	background: url("#{$imgpath}arrowpngs/red.png") no-repeat scroll center top transparent;
+    }
+	p {
+		text-align: center;
+		font: normal 1em Arial;
+	}
+}
+			
+/* Utility */
 .clear {
     clear: both;
 }
