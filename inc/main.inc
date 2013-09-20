@@ -38,15 +38,13 @@
             <!--/choices-->
 
             <!--results-->
-            <div class="results">
+            <div class="results" style="visibility:hidden;">
                 <h4 class="results__header"></h4>
                     <div class="results__item results__gender">
                         <div class="results__absolute">
                             <h4 class="your-choice">Men</h4>
                             <h4 class="percentage">6%</h4>
                             <h4 class="number">600,000 claims</h4>
-                            <p>One year ago: <span>7.0%</span></p>
-                            <p>Five years ago: <span>8.2%</span></p>
                         </div>
                         <div class="results__relative">
                             <h4 class="up">1.2%</h4>

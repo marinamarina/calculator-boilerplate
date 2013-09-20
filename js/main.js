@@ -35,5 +35,5 @@
 
 	require(config, dependencies, function (news, Controller) { 
         Controller.init();
-	}); //end of require
-}());//end of the function
+	});
+}());
