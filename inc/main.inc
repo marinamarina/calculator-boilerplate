@@ -38,7 +38,7 @@
             <!--/choices-->
 
             <!--results-->
-            <div class="results" style="visibility:hidden;">
+            <div class="results">
                 <h4 class="results__header"></h4>
                     <div class="results__item results__gender">
                         <div class="results__absolute">
