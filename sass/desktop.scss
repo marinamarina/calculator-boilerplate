@@ -3,7 +3,7 @@
 #calculator-mvc {
     margin: 0;
     width: 624px;
-    font-size: 16px;   
+    font-size: 1.231em;   
 }
 .container-inner {
 	padding-left: 1em;
@@ -23,9 +23,12 @@
 	line-height: 34px;
 	color: darken($bbc-grey, 10%);
 	padding-bottom: 0.6em;
+	margin: 0;
 }
 .header__description {
 	font-weight: bold;
+	font-size: 1em;
+	margin: 0;
 }
 
 /* Choices */
