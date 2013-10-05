@@ -4,15 +4,16 @@
     margin: 0;
     width: 624px;
     font-size: 1.231em; 
+    h1, h2, h3, h4 {
+		margin: 0;
+		padding: 0;
+	}
 }
 .container-inner {
 	padding-left: 1em;
     width: 100%;
 }
-h1, h2, h3, h4 {
-	margin: 0;
-	padding: 0;
-}
+
 
 /* Header */
 .header {
@@ -141,9 +142,9 @@ h1, h2, h3, h4 {
 }
 
 .results__relative {
-	   position: absolute;
-	   right: 8px;
-	   top: 63px;
+	position: absolute;
+	right: 8px;
+	top: 63px;
 	h4 {
 		color: $bbc-grey;
 	    font: bold 1em/1em Arial;
