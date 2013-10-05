@@ -9,11 +9,15 @@
 	padding-left: 1em;
     width: 100%;
 }
+h1, h2, h3, h4 {
+	margin: 0;
+	padding: 0;
+}
 
 /* Header */
 .header {
 	width: 624px;
-	height: 190px;
+	height: 210px;
 	padding: 1em 0 1em 1em;
 }
 .header__title {
@@ -23,12 +27,10 @@
 	line-height: 34px;
 	color: darken($bbc-grey, 10%);
 	padding-bottom: 0.6em;
-	margin: 0;
 }
 .header__description {
 	font-weight: bold;
 	font-size: 1em;
-	margin: 0;
 }
 
 /* Choices */
